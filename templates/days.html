@@ -1,0 +1,22 @@
+{% extends 'masterpage.html' %}
+{% block content %}
+<div id=app>
+    <p>[[ title ]]</p>
+    <ul>
+        <li v-for="day in days">
+            <h4> Day [[ day ]]</h4>
+        </li>
+    </ul>
+</div>
+<script>
+    new Vue({
+        delimiters: ['[[', ']]'],
+        el: '#app',
+        data: {
+            title: 'Welcome to My Journal',
+            days: [1, 2, 3]
+        }
+    })
+
+</script>
+{% endblock %}
